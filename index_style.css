@@ -3,8 +3,10 @@
   border: 3px solid gray;
   border-radius: 5px;
   white-space: pre-line;
-  width: 380px; //sets the contents size
+  width: 600px; //sets the contents size
   height: 120px;
   margin: 10;
   padding: 10px;
+  font-family: monospace;
+
 }
