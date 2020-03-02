@@ -6,8 +6,50 @@
     <link rel="stylesheet" href="index_style.css"
   </head>
   <body>
-
     <h1>Independent Research</h1>
+
+    <!3/2/2020>
+    <h3>Blog Entry: 2/17/2020</h3>
+    <h4>Adding Sounds to Websites</h4>
+    <p>I was currious on how one could add sound to a webpage. I found two different implementations. The first was to set up an anchor to play sound on a click. This is done with javascript.</p>
+    <p> The javascript looks like this:</p>
+    <p class="code_box">
+      &#60;script type="text/javascript"&#62;
+        function playSound(soundfile){
+          document.getElementById("Sound_Text").innerHTML="&#60;embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" /&#62;";
+        }
+      &#60;/script&#62;
+    </p>
+    <p> and the anchor looks like this:
+    <p class="code_box">
+      &#60;a href="#" onclick="playSound('cow_moo.mp3');"> Click here to hear a sound </a&#62;
+    </p>
+    <span id="Sound_Text"></span>
+    <p><a href="#" onclick="playSound('cow_moo.mp3');"> Click here to hear a sound </a> </p>
+
+    <p>The other part I was intrested in was playing a sound when you hover over an element. The implementation of this is similar to above. It uses the exact same javascript function, but it uses the 'onmouseover' attribute instead of an anchor. This can work on every element that shows up on the webpage, but for this example I will use an image.</p>
+
+    <img src="https://ichef.bbci.co.uk/images/ic/704xn/p0686krr.jpg" onmouseover="playSound('cow_moo_2.mp3')" width=25%>
+
+    <p>The code for the image above looks like:</p>
+    <p class="code_box">
+      &#60;img src="https://ichef.bbci.co.uk/images/ic/704xn/p0686krr.jpg" onmouseover="playSound('cow_moo_2.mp3')" width=25%&#62;
+    </p>
+
+    <p>My source for this info can be found at <a href="https://www.lifewire.com/play-sound-on-click-or-rollover-3469484" target="_blank"> livewire.com </a> </p>
+
+    <!2/24/2020>
+    <h3>Blog Entry: 2/24/2020</h3>
+    <h4>Latex Editor</h4>
+    <p> As a Applied Math Major, I wanted to learn how to insert math equations into a website. This was a surisingly difficult task to accomplish with out using any external libraries. I did find a solution. Another website, 'Code Cogs' provides a useful LaTex (a math equation markup language) converter that you can easly link to. For example:
+    <p><img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/></p>
+    The code for this is as follows:
+    <p class="code_box">
+      &#60;img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/&#62;
+    </p>
+    <p> The link to the source can be found at <a href="https://www.codecogs.com/latex/integration/htmlequations.php" target="_blank">www.codecogs.com</a>
+
+    <!2/17/2020>
     <h3>Blog Entry: 2/17/2020</h3>
     <p>One of the things I was interested in was learning how to display certain kinds of media on the web. For my project, I am thinking about building a website for an campus organization I am part of, ‘Data Analytic Association’ . My goal would be to design a site that has useful resources for new members. This would include guides for how to set-up software we use and some walk-throughs on how to use some of the statistical tools our organization uses. This would require me to embed lots of information into the web pages.  For example, embedding videos or tables into a web page in using HTML.</p>
     <h4>Embedding Videos</h4>
@@ -17,15 +59,17 @@
     </p>
     <p>And the code in action:</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h3>Blog Entry: 2/24/2020</h3>
-    <p> As a Applied Math Major, I wanted to learn how to insert math equations into a website. This was a surisingly difficult task to accomplish with out using any external libraries. I did find a solution. Another website, 'Code Cogs' provides a useful LaTex (a math equation markup language) converter that you can easly link to. For example:
-    <p><img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/></p>
-    The code for this is as follows:
-    <p class="code_box">
-      &#60;img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/&#62;
-    </p>
-    <p> The link to the source can be found at <a href="https://www.codecogs.com/latex/integration/htmlequations.php">www.codecogs.com</a>
+
+
 
 
   </body>
+
+  <script type="text/javascript">
+
+    function playSound(soundfile){
+      document.getElementById("Sound_Text").innerHTML="<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+    }
+
+  </script>
 </html>
